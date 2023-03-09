@@ -104,6 +104,10 @@ functions
 firebase.json
 firestore.*
 
+# build
+build
+.build
+./build
 
 # whatsapp sessions
 .wwebjs_auth

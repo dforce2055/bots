@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../src/@types/user.ts"],
-  "sourcesContent": ["// user is a final user, it's a customer for a service provider\nexport interface User {\n  \n}\n"],
-  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;",
-  "names": []
-}

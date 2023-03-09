@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../src/routes/index.ts"],
-  "sourcesContent": ["import { Application } from 'express'\nimport {\n  DataControllerInstance,\n  PingControllerInstance\n} from '../controllers'\nimport { requestTimestamp } from '../middlewares'\n\nexport const loadApiEndpoints = (app: Application): void => {\n  // v1\n  app.get('/api/v1/data',requestTimestamp,  DataControllerInstance.getDummyData)\n  \n  app.get('/api/v1/ping', requestTimestamp, PingControllerInstance.getMessage)\n  app.get('/api/v1/ping/:id', requestTimestamp, PingControllerInstance.getById)\n}\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AACA,yBAGO;AACP,yBAAiC;AAE1B,MAAM,mBAAmB,CAAC,QAA2B;AAE1D,MAAI,IAAI,gBAAe,qCAAmB,0CAAuB,YAAY;AAE7E,MAAI,IAAI,gBAAgB,qCAAkB,0CAAuB,UAAU;AAC3E,MAAI,IAAI,oBAAoB,qCAAkB,0CAAuB,OAAO;AAC9E;",
-  "names": []
-}

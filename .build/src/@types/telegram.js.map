@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../src/@types/telegram.ts"],
-  "sourcesContent": ["export interface iTelegramChat {\n  bot_info: BotInfo;\n  message_id: number;\n  from:       From;\n  chat:       Chat;\n  date:       number;\n  text:       string;\n  entities: Entity[];\n}\nexport interface Chat {\n  id:         number;\n  first_name: string;\n  username:   string;\n  type:       string;\n}\nexport interface Entity {\n  offset: number;\n  length: number;\n  type:   string;\n}\nexport interface From {\n  id:            number;\n  is_bot:        boolean;\n  first_name:    string;\n  username:      string;\n  language_code: string;\n}\nexport interface BotInfo {\n  id:            number;\n  client_id:     number;\n  is_bot:        boolean;\n  first_name:    string;\n  username:      string;\n  can_join_groups: boolean;\n  can_read_all_group_messages: boolean;\n  supports_inline_queries: boolean;\n}"],
-  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;",
-  "names": []
-}

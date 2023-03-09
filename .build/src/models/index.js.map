@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../src/models/index.ts"],
-  "sourcesContent": ["export * from './Customer'\nexport * from './TelegramChat'\nexport * from './WhatsAppChat'"],
-  "mappings": ";;;;;;;;;;;;;;;AAAA;AAAA;AAAA,2BAAc,uBAAd;AACA,2BAAc,2BADd;AAEA,2BAAc,2BAFd;",
-  "names": []
-}

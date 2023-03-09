@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../src/@types/index.ts"],
-  "sourcesContent": ["export * from './customer'\nexport * from './telegram'\nexport * from './whatsapp'\nexport * from './user'\nimport { Request } from 'express'\n\nexport interface IRequest extends Request {\n  requestTimestamp?: string\n}\n\nexport interface DummyObject {\n  id: number|string\n  title: string\n  category: string\n  description: string\n}\n\nexport enum CHAT_TYPE {\n  TELEGRAM = 'telegram',\n  WHATSAPP = 'whatsapp'\n}"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,0BAAc,uBAAd;AACA,0BAAc,uBADd;AAEA,0BAAc,uBAFd;AAGA,0BAAc,mBAHd;AAiBO,IAAK,YAAL,kBAAKA,eAAL;AACL,EAAAA,WAAA,cAAW;AACX,EAAAA,WAAA,cAAW;AAFD,SAAAA;AAAA,GAAA;",
-  "names": ["CHAT_TYPE"]
-}
