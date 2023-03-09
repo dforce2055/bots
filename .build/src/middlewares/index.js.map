@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/middlewares/index.ts"],
+  "sourcesContent": ["export * from './testMiddleware'"],
+  "mappings": ";;;;;;;;;;;;;;;AAAA;AAAA;AAAA,gCAAc,6BAAd;",
+  "names": []
+}

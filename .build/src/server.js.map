@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/server.ts"],
+  "sourcesContent": ["/* eslint-disable no-console */\nimport app from './app'\n/**\n * Start Express server.\n*/\n\nconst server = app.listen(app.get('port'), () => {\n  console.log(\n    '  App is running at http://localhost:%d in %s mode',\n    app.get('port'),\n    app.get('env')\n  )\n  console.log('  Press CTRL-C to stop\\n')\n  console.log(\n    `Version 1 \uD83D\uDCD7 Docs are available on http://localhost:${app.get('port')}/api/v1/docs`\n  )\n})\n\nexport default server\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AACA,iBAAgB;AAKhB,MAAM,SAAS,WAAAA,QAAI,OAAO,WAAAA,QAAI,IAAI,MAAM,GAAG,MAAM;AAC/C,UAAQ;AAAA,IACN;AAAA,IACA,WAAAA,QAAI,IAAI,MAAM;AAAA,IACd,WAAAA,QAAI,IAAI,KAAK;AAAA,EACf;AACA,UAAQ,IAAI,0BAA0B;AACtC,UAAQ;AAAA,IACN,8DAAuD,WAAAA,QAAI,IAAI,MAAM;AAAA,EACvE;AACF,CAAC;AAED,IAAO,iBAAQ;",
+  "names": ["app"]
+}

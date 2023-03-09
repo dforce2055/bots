@@ -1,10 +1,6 @@
 module.exports = {
   root: true,
 
-  env: {
-    node: true,
-  },
-
   "parser": "@typescript-eslint/parser",
   "extends": [
     "prettier"

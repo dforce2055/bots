@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/controllers/index.ts"],
+  "sourcesContent": ["export * from './data'\nexport * from './ping'\nexport * from './bots'"],
+  "mappings": ";;;;;;;;;;;;;;;AAAA;AAAA;AAAA,gCAAc,mBAAd;AACA,gCAAc,mBADd;AAEA,gCAAc,mBAFd;",
+  "names": []
+}

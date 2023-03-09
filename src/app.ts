@@ -8,8 +8,7 @@ import { DataBase } from './db/database'
 import { startBots } from './controllers/bots'
 import { loadApiEndpoints } from './routes'
 import swaggerUi from 'swagger-ui-express'
-import { Customer } from './models'
-import { uuid } from 'uuidv4'
+
 // Create Express server
 // https://expressjs.com/en/resources/middleware/cors.html
 import cors from 'cors'
@@ -48,33 +47,8 @@ app.use(
 // load routes
 loadApiEndpoints(app)
 
-const addCustomers = async () => { 
-  try {
-    const customer = new Customer({
-      name: 'Bigote',
-      email: 'deperez2055@gmail.com',
-      phone: '549225459620036',
-      telegram_bot_client_id: TELEGRAM_TOKEN,
-      whatsapp_bot_client_id: '549225459620036'
-    })
-    const customer2 = new Customer({
-      name: 'Open House Padel Pinamar',
-      email: 'openhouse@gmail.com',
-      phone: '5492254611686',
-      telegram_bot_client_id: TELEGRAM_TOKEN2,
-      whatsapp_bot_client_id: '5492254611686'
-    })
-    await customer.save()
-    await customer2.save()
-    console.log('🟢 Customers added to Data Base!')
-  } catch (error) {
-    console.log('🟢 Customers already in Data Base!')
-  }
-}
-
 DataBase.start()
   .then(async (dbInstance) => {
-    await addCustomers()
     await startBots(app, dbInstance)
   })
 

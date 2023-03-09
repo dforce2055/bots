@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/@types/customer.ts"],
+  "sourcesContent": ["// is my customer, service provider\nexport interface iCustomer {\n  id: string;\n  name: string;\n  email: string;\n  phone: string;\n  telegram_bot_client_id?: string;\n  whatsapp_bot_client_id?: string;\n  //\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;",
+  "names": []
+}

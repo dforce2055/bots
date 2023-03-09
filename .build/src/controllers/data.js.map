@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/controllers/data.ts"],
+  "sourcesContent": ["import express, { Request, Response } from 'express'\nimport { Get, Post, Route, Tags } from 'tsoa'\nimport dummyData from '../../public/data/dummy.data.json'\nimport { DummyObject } from '../@types'\n\ninterface DummyDataResponse {\n  message: string\n  data: DummyObject[]\n}\n\n// class tsoa declaration for documentation purposes\n@Route('/api/v1/data')\nexport class DataController {\n  @Get('/')\n  public async getDummyData(): Promise<DummyDataResponse> {\n    return {\n      message: 'Here is the dummy data',\n      data: dummyData\n    }\n  }\n}\n\n// methods to be used in the routes\nexport const getDummyData =  async (req: Request, res: Response) => {\n  const controller = new DataController()\n  const response = await controller.getDummyData()\n  return res.send(response)\n}\n\nexport const DataControllerInstance = {\n  getDummyData,\n}"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AACA,kBAAuC;AACvC,wBAAsB;AAUf,IAAM,iBAAN,MAAqB;AAAA,EAE1B,MAAa,eAA2C;AACtD,WAAO;AAAA,MACL,SAAS;AAAA,MACT,MAAM,kBAAAA;AAAA,IACR;AAAA,EACF;AACF;AANe;AAAA,MADZ,iBAAI,GAAG;AAAA,GADG,eAEE;AAFF,iBAAN;AAAA,MADN,mBAAM,cAAc;AAAA,GACR;AAWN,MAAM,eAAgB,OAAO,KAAc,QAAkB;AAClE,QAAM,aAAa,IAAI,eAAe;AACtC,QAAM,WAAW,MAAM,WAAW,aAAa;AAC/C,SAAO,IAAI,KAAK,QAAQ;AAC1B;AAEO,MAAM,yBAAyB;AAAA,EACpC;AACF;",
+  "names": ["dummyData"]
+}

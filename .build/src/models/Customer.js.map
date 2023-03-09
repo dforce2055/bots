@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/models/Customer.ts"],
+  "sourcesContent": ["import { Schema, model } from 'mongoose'\nimport {\n  iCustomer,\n} from '../@types'\n\nconst CustomerSchema = new Schema<iCustomer>({\n  name: { type: String, required: false },\n  email: { type: String, required: true, index: true, unique: true },\n  phone: { type: String, required: true },\n  telegram_bot_client_id: { type: String, required: false, index: true, unique: true },\n  whatsapp_bot_client_id: { type: String, required: false, index: true, unique: true },\n})\n\n\n\nexport const Customer = model<iCustomer>('Customer', CustomerSchema)\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,sBAA8B;AAK9B,MAAM,iBAAiB,IAAI,uBAAkB;AAAA,EAC3C,MAAM,EAAE,MAAM,QAAQ,UAAU,MAAM;AAAA,EACtC,OAAO,EAAE,MAAM,QAAQ,UAAU,MAAM,OAAO,MAAM,QAAQ,KAAK;AAAA,EACjE,OAAO,EAAE,MAAM,QAAQ,UAAU,KAAK;AAAA,EACtC,wBAAwB,EAAE,MAAM,QAAQ,UAAU,OAAO,OAAO,MAAM,QAAQ,KAAK;AAAA,EACnF,wBAAwB,EAAE,MAAM,QAAQ,UAAU,OAAO,OAAO,MAAM,QAAQ,KAAK;AACrF,CAAC;AAIM,MAAM,eAAW,uBAAiB,YAAY,cAAc;",
+  "names": []
+}

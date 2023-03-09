@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/middlewares/testMiddleware.ts"],
+  "sourcesContent": ["/* eslint-disable no-console */\nimport {  NextFunction, Response } from 'express'\nimport { IRequest } from '../@types'\n\nexport const requestTimestamp = (req: IRequest, res: Response, next: NextFunction) => {\n  req.requestTimestamp = new Date().toISOString()\n\n  res.on('finish', () => {\n    console.log(req.method, decodeURI(req.url), res.statusCode, res.statusMessage, req.requestTimestamp)\n  })\n  next()\n}"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAIO,MAAM,mBAAmB,CAAC,KAAe,KAAe,SAAuB;AACpF,MAAI,mBAAmB,IAAI,KAAK,EAAE,YAAY;AAE9C,MAAI,GAAG,UAAU,MAAM;AACrB,YAAQ,IAAI,IAAI,QAAQ,UAAU,IAAI,GAAG,GAAG,IAAI,YAAY,IAAI,eAAe,IAAI,gBAAgB;AAAA,EACrG,CAAC;AACD,OAAK;AACP;",
+  "names": []
+}

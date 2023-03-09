@@ -2,11 +2,43 @@
 import { Express } from 'express'
 import { DataBase } from '../db/database'
 import { WhatssAppBot, TelegramBot, Task } from '../utils'
-const { TELEGRAM_TOKEN, TELEGRAM_TOKEN2 } = process.env
+import { Customer } from '../models'
+const {
+  TELEGRAM_TOKEN,
+  TELEGRAM_TOKEN2,
+  PHONE,
+  PHONE2,
+} = process.env
+
+const addCustomers = async () => {
+  try {
+    const customer = new Customer({
+      name: 'Bigote',
+      email: 'deperez2055@gmail.com',
+      phone: PHONE,
+      telegram_bot_client_id: TELEGRAM_TOKEN,
+      whatsapp_bot_client_id: PHONE
+    })
+    const customer2 = new Customer({
+      name: 'Open House Padel Pinamar',
+      email: 'openhouse@gmail.com',
+      phone: PHONE2,
+      telegram_bot_client_id: TELEGRAM_TOKEN2,
+      whatsapp_bot_client_id: PHONE2
+    })
+    await customer.save()
+    await customer2.save()
+    console.log('🟢 Customers added to Data Base!')
+  } catch (error) {
+    console.log('🟢 Customers already in Data Base!')
+  }
+}
 
 export const startBots = async (app: Express, dbInstance: any) => {
   const db = dbInstance || await DataBase.start()
   app.set('db', db)
+  // add customers if you needed
+  // await addCustomers()
 
   // TODO: load all bots from DB
   const telegramBot = new TelegramBot({
@@ -18,8 +50,8 @@ export const startBots = async (app: Express, dbInstance: any) => {
   })
   telegramBot2.start()
   console.log('🟢 Telegram Bots are ready!')
-  
-  
+
+
   const store = await db?.getMongooseStore()
   // TODO: load all bots from DB
   const whatsAppBot = new WhatssAppBot({
@@ -38,7 +70,7 @@ export const startBots = async (app: Express, dbInstance: any) => {
 
 
   // actions can't take parameters
-  const action = async() => {
+  const action = async () => {
     whatsAppBot.sendMessage({ clientId: '5492254620036', message: 'Hola Bigote! ' + new Date().toISOString() })
     await telegramBot.sendMessage({
       chatId: '1266264139',
