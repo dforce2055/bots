@@ -2,7 +2,7 @@
   "name": "node-express-typescript-skeleton",
   "version": "1.0.0",
   "description": "skeleton to build an starter node typescript project",
-  "main": "index.js",
+  "main": "server.js",
   "author": "Diego Pérez",
   "developer": "dforce2055 dperez2055@gmail.com",
   "license": "MIT",

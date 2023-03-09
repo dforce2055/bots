@@ -1,6 +1,6 @@
 compile = "./.config/build.sh"
-run = "node --enable-source-maps .build/index.js"
-entrypoint = "index.ts"
+run = "node --enable-source-maps .build/src/server.js"
+entrypoint = "server.ts"
 hidden = [".build", ".config"]
 
 [packager]
